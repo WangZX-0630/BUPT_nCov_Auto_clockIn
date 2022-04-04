@@ -29,11 +29,11 @@ jobs:
         pip install -r requirements.txt
     - name: 'signin'
       env:
-        USERNAME: ${{ 2018213165 }}
-        PASSWORD: ${{ wzx000630 }}
-        AREA: ${{ 北京市+西城区 }}
-        PROVINCE: ${{ 北京市 }}
-        CITY: ${{ 北京市 }}
-        SFZX: ${{ 0 }}
+        USERNAME: ${{ secrets.USERNAME }}       # 学号
+        PASSWORD: ${{ secrets.PASSWORD }}       # 信息门户用户名
+        AREA: ${{ secrets.AREA }}               # 所在地区，例如"北京市+海淀区'
+        PROVINCE: ${{ secrets.PROVINCE }}       # 所在省份，例如"北京市"
+        CITY: ${{ secrets.CITY }}               # 所在城市，例如"北京市"
+        SFZX: ${{ secrets.SFZX }}               # 是否在校，填"1"表示在校
       run: python auto.py
 
