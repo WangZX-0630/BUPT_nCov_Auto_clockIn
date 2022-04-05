@@ -36,4 +36,6 @@ jobs:
         CITY: ${{ secrets.CITY }}               # 所在城市，例如"北京市"
         SFZX: ${{ secrets.SFZX }}               # 是否在校，填"1"表示在校
       run: python auto.py
+    - name: 'test'
+      run: python test.py
 
